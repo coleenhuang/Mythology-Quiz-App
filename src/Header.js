@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <header>
-            <h1>Mythology Quiz App</h1>
+            <h1>
+                <Link to="/">Mythology Quiz App</Link>
+            </h1>
         </header>
     )
 }

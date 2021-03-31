@@ -13,7 +13,7 @@ function App() {
         <Route exact path="/">
           <Start />
         </Route>
-        <Route path="/questions">
+        <Route path="/questions/:type">
           <Questions />
         </Route>
       </Switch>
