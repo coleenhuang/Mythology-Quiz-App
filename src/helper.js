@@ -17,6 +17,9 @@ function shuffle(array) {
     return array;
 }
 
-function checkAnswer() {
-
+function checkAnswer(selectedAnswer, question) {
+    const correctAnswer = question.correct;
+    return selectedAnswer === correctAnswer ? true : 0
 }
+
+export {shuffle, checkAnswer}

@@ -1,4 +1,4 @@
-export default [
+export const norseQuestions = [
     {
         id: 1,
         questionText: "What is Yggdrasil?",

@@ -1,4 +1,4 @@
-export default [
+export const greekQuestions = [
     {
         id: 1,
         questionText: "Which of these was a name that Paris, prince of Troy, was also known by?",

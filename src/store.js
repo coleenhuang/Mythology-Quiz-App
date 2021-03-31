@@ -1,12 +1,12 @@
 import React, {createContext, useReducer} from 'react';
-import greekQuestions from './questions/Greek';
-import norseQuestions from './questions/Norse';
+import {greekQuestions} from './questions/Greek';
+import {norseQuestions} from './questions/Norse';
 
 const initialState = {
     type: undefined,
     questions: [],
     index: 0,
-    correctAnswers: 0
+    score: 0
 }
 
 export const Context = createContext();

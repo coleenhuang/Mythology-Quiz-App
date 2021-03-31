@@ -4,8 +4,8 @@ import {ContextProvider} from './store'
 import Header from './Header';
 import './App.css';
 import Start from './Start';
-import Questions from './Questions';
-import Check from './Check';
+import Quiz from './Quiz';
+
 
 
 
@@ -18,11 +18,8 @@ function App() {
         <Route exact path="/">
           <Start />
         </Route>
-        <Route path="/questions/:num">
-          <Questions />
-        </Route>
-        <Route path="/check/:num">
-          <Check /> 
+        <Route path="/questions/:type">
+          <Quiz />
         </Route>
       </Switch>
     </ContextProvider>

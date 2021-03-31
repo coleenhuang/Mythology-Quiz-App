@@ -2,11 +2,11 @@ import React from 'react';
 
 const AnswerOptions  = (props) => {
     return (
-        <ul>
+        <ul onChange={props.change}>
                 {props.answers.map((answer, index) => (
-                    <li key={answer.id}>
-                        <input type="radio" name={`r${index}`} id={answer.id}/>
-                        <label for={`r${index}`}>{answer.text}</label>
+                    <li key={`a${answer.id}`}>
+                        <input required type="radio" name='answerOption' id={`r${index}`} value={answer.id}/>
+                        <label htmlFor={`r${index}`}>{answer.text}</label>
                     </li>
                 ))}
         </ul>

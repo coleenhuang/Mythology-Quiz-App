@@ -14,10 +14,10 @@ const Start = () => {
         <div>
             <h2>How much do you know about mythology?</h2>
             <button onClick={() => handleClick('greek')}>
-                <Link to="/questions/greek">Greek and Roman</Link>
+                <Link to={`/questions/greek/${state.index + 1}`}>Greek and Roman</Link>
             </button>
             <button onClick={() => handleClick('norse')}>
-                <Link to="/questions/norse">Norse</Link>
+                <Link to={`/questions/norse/${state.index + 1}`}>Norse</Link>
             </button>
             
         </div>
