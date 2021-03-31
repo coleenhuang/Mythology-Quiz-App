@@ -5,6 +5,8 @@ import Header from './Header';
 import './App.css';
 import Start from './Start';
 import Questions from './Questions';
+import Check from './Check';
+
 
 
 function App() {
@@ -16,8 +18,11 @@ function App() {
         <Route exact path="/">
           <Start />
         </Route>
-        <Route path="/questions/:type">
+        <Route path="/questions/:num">
           <Questions />
+        </Route>
+        <Route path="/check/:num">
+          <Check /> 
         </Route>
       </Switch>
     </ContextProvider>

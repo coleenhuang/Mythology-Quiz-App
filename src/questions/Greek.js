@@ -1,46 +1,46 @@
-[
+export default [
     {
         id: 1,
-        question: "Which of these was a name that Paris, prince of Troy, was also known by?",
+        questionText: "Which of these was a name that Paris, prince of Troy, was also known by?",
         options: [
             {
                 id: 1,
-                answer: "Alexander"
+                text: "Alexander"
             },
             {
                 id: 2,
-                answer: "Hector"
+                text: "Hector"
             },
             {
                 id: 3,
-                answer: "Jason"
+                text: "Jason"
             },
             {
                 id: 4,
-                answer: "Theseus"
+                text: "Theseus"
             }
         ],
         correct: 1
     },
     {
         id: 2,
-        question: "What was Hestia the goddess of?",
+        questionText: "What was Hestia the goddess of?",
         options: [
             {
                 id: 1,
-                answer: "Art and music"
+                text: "Art and music"
             },
             {
                 id: 2,
-                answer: "Wisdom"
+                text: "Wisdom"
             },
             {
                 id: 3,
-                answer: "Home and hearth"
+                text: "Home and hearth"
             },
             {
                 id: 4,
-                answer: "The harvest"
+                text: "The harvest"
             }
 
         ],
