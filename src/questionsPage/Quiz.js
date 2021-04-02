@@ -1,7 +1,7 @@
 import React, {useState, useContext, useEffect} from 'react';
 import {useParams } from 'react-router-dom';
 import QuestionForm from './QuestionForm';
-import {Context } from './store';
+import {Context } from '../store';
 
 const Quiz = () => {
     const [state, dispatch] = useContext(Context);
