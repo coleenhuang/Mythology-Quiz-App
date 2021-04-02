@@ -21,7 +21,7 @@ const reducer = (state, action) => {
             type: action.payload,
             questions: [...state.questions, ...q]
         };
-      case 'RESET_QUESTIONS':
+      case 'RESET':
           return {
               ...state, questions: undefined
           }
