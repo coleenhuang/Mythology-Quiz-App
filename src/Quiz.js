@@ -7,6 +7,7 @@ const Quiz = () => {
     const [state, dispatch] = useContext(Context);
     const [questionIndex, setIndex] = useState(0);
     const {type} = useParams();
+   
     useEffect(() => {
         if (state.questions.length === 0) {
             dispatch({
@@ -14,7 +15,7 @@ const Quiz = () => {
                 payload: type
             })
         }
-    }, [])
+    }, [state.questions, type])
 
     const nextQuestion = () => {
         setIndex(questionIndex + 1)

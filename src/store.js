@@ -15,7 +15,7 @@ export const Context = createContext();
 const reducer = (state, action) => {
     switch(action.type) {
       case 'SET_TYPE':
-        let q = action.payload === 'Greek'? greekQuestions: norseQuestions
+        let q = action.payload === 'greek'? greekQuestions: norseQuestions
         return {
             ...state,
             type: action.payload,
