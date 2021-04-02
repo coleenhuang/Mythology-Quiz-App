@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-    <ContextProvider>
       <Switch>
         <Route exact path="/">
           <Start />
@@ -26,7 +25,6 @@ function App() {
           <Results />
         </Route>
       </Switch>
-    </ContextProvider>
     </div>
   );
 }
