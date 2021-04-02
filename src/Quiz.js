@@ -15,9 +15,15 @@ const Quiz = () => {
             })
         }
     }, [])
+
+    const nextQuestion = () => {
+        setIndex(questionIndex + 1)
+    }
+
+
     return (
         <div>
-            <QuestionForm index={questionIndex}/>
+            <QuestionForm index={questionIndex} nextQuestion={nextQuestion}/>
         </div>
     )
 

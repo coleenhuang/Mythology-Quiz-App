@@ -5,7 +5,7 @@ import {norseQuestions} from './questions/Norse';
 const initialState = {
     type: undefined,
     questions: [],
-    index: 0,
+    answers: [],
     score: 0
 }
 
@@ -21,10 +21,19 @@ const reducer = (state, action) => {
             type: action.payload,
             questions: [...state.questions, ...q]
         };
-        case 'RESET_QUESTIONS':
-            return {
-                ...state, questions: undefined
-            }
+      case 'RESET_QUESTIONS':
+          return {
+              ...state, questions: undefined
+          }
+      case 'ADD_ANSWER':
+        return {
+          ...state,
+          answers:[...state.answers, 
+            {
+              questionId: action.payload.questionId,
+              answerId: action.payload.answerId
+            }]
+        }
       default:
         throw new Error();
     };

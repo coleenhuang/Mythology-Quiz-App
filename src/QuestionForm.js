@@ -3,7 +3,7 @@ import AnswerOptions from './AnswerOptions';
 
 import {Context} from './store'
 
-const QuestionForm = ({index}) => {
+const QuestionForm = ({index, nextQuestion}) => {
     const [state, dispatch] = useContext(Context);
     const [selectedAnswer, setAnswer] = useState();
     
@@ -14,7 +14,14 @@ const QuestionForm = ({index}) => {
     }
     const submitAnswer = (event) => {
         event.preventDefault();
-        console.log('submit!')
+        dispatch({
+            type:'ADD_ANSWER',
+            payload: {
+                questionId: q.id,
+                answerId: selectedAnswer
+            }
+        })
+        nextQuestion()
     }
 
     const renderForm  = () => {
@@ -26,7 +33,7 @@ const QuestionForm = ({index}) => {
             <form onSubmit={submitAnswer}>
             <h2>{q.questionText}</h2>
             <AnswerOptions answers={q.options} change={handleChange}/>
-            <button type='submit'>Submit</button>
+            <button type='submit'>Next</button>
             </form>
             )
         }
