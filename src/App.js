@@ -1,10 +1,10 @@
 import React from 'react';
 import {Switch, Route } from 'react-router-dom';
-import {ContextProvider} from './store'
 import Header from './Header';
 import './App.css';
-import Start from './Start';
-import Quiz from './Quiz';
+import Start from './startPage/Start';
+import Questions from './questionsPage/Questions'
+import Results from './resultsPage/Results'
 
 
 
@@ -20,7 +20,10 @@ function App() {
           <Start />
         </Route>
         <Route path="/questions/:type">
-          <Quiz />
+          <Questions />
+        </Route>
+        <Route path="/results">
+          <Results />
         </Route>
       </Switch>
     </ContextProvider>
