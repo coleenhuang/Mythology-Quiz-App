@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Results = () => {
+const Results = ({answerList}) => {
+    console.log(answerList)
     return (
         <div>
             Results
@@ -9,4 +11,10 @@ const Results = () => {
     )
 }
 
-export default Results;
+function mapStateToProps(state) {
+    return {
+        answerList: state.answerList
+    }
+}
+
+export default connect(mapStateToProps)(Results);

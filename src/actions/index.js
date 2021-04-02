@@ -13,9 +13,13 @@ export function resetQuestions(){
     }
 }
 
-export function addAnswer () {
+export function addAnswer (questionId, answerId) {
     return {
-        type: ADD_ANSWER
+        type: ADD_ANSWER,
+        payload: {
+            questionId,
+            answerId
+        }
     }
 }
 

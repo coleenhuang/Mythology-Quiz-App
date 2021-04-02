@@ -4,7 +4,7 @@ import * as actions from '../actions';
 import AnswerOptions from './AnswerOptions';
 import {useHistory} from 'react-router-dom';
 
-const Questions = ({questionList}) => {
+const Questions = ({questionList, addAnswer}) => {
     let history = useHistory();
     const [questionIndex, setIndex] = useState(0);
     const [selectedAnswer, setAnswer] = useState();
@@ -23,6 +23,7 @@ const Questions = ({questionList}) => {
     }
     const submitAnswer = (event) => {
         event.preventDefault();
+        addAnswer(questionList[questionIndex].id, selectedAnswer)
         next()
     }
 
