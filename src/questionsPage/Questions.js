@@ -1,7 +1,6 @@
-import React, {useEffect} from 'react';
-import {useParams } from 'react-router-dom';
+import React from 'react';
 import { connect } from 'react-redux';
-import actions from '../actions'
+import * as actions from '../actions'
 
 const Questions = ({questionList}) => {
     return (
@@ -11,8 +10,8 @@ const Questions = ({questionList}) => {
 
 function mapStateToProps(state) {
     return {
-        questionList
+        questionList: state.questionList
     }
 }
 
-export default Questions;
+export default connect(mapStateToProps, actions)(Questions);

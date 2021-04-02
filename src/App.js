@@ -1,5 +1,6 @@
 import React from 'react';
-import {Switch, Route } from 'react-router-dom';
+import {Switch, Route, Redirect } from 'react-router-dom';
+import {connect} from 'react-redux';
 import Header from './Header';
 import './App.css';
 import Start from './startPage/Start';
@@ -7,9 +8,7 @@ import Questions from './questionsPage/Questions'
 import Results from './resultsPage/Results'
 
 
-
-
-function App() {
+function App({questionList}) {
   
   return (
     <div className="App">
@@ -19,7 +18,7 @@ function App() {
           <Start />
         </Route>
         <Route path="/questions/:type">
-          <Questions />
+          {questionList.length === 0 ? <Redirect to='/' /> : <Questions />}
         </Route>
         <Route path="/results">
           <Results />
@@ -29,4 +28,10 @@ function App() {
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    questionList: state.questionList
+  }
+}
+
+export default connect(mapStateToProps)(App);
