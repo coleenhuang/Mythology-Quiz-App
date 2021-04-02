@@ -8,15 +8,15 @@ export const norseQuestions = [
                 text: "A rowan tree"
             },
             {
-                id:1,
+                id:2,
                 text: "An ash tree"
             },
             {
-                id:1,
+                id:3,
                 text: "A hazel tree"
             },
             {
-                id:1,
+                id:4,
                 text: "An oak tree"
             },
         ],

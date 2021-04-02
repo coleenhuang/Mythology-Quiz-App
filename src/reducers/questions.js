@@ -1,6 +1,6 @@
 import {FETCH_QUESTIONS, RESET_QUESTIONS} from '../actions/types';
-import {greekQuestions} from './questions/Greek';
-import {norseQuestions} from './questions/Norse';
+import {greekQuestions} from '../questions/Greek';
+import {norseQuestions} from '../questions/Norse';
 
 export default function questionsReducer (state=[], action) {
     switch(action.type){
@@ -13,7 +13,8 @@ export default function questionsReducer (state=[], action) {
                 default:
                     throw new Error()
             }
-        
+        case RESET_QUESTIONS:
+            return []
         default: 
             return state
     }

@@ -1,7 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react';
-import AnswerOptions from '../AnswerOptions';
+import AnswerOptions from './AnswerOptions';
 
-import {Context} from '../store'
 
 const QuestionForm = ({index, nextQuestion}) => {
     const [state, dispatch] = useContext(Context);
