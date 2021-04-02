@@ -1,21 +1,29 @@
 import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import AnswerOptions from './AnswerOptions'
+import AnswerOptions from './AnswerOptions';
+import {useHistory} from 'react-router-dom';
 
 const Questions = ({questionList}) => {
+    let history = useHistory();
     const [questionIndex, setIndex] = useState(0);
     const [selectedAnswer, setAnswer] = useState();
 
     const handleChange = (event) => {
         setAnswer(event.target.value)
     }
-    const nextQuestion = () => {
-        setIndex(questionIndex + 1)
+    const next = () => {
+        if (questionIndex + 1 === questionList.length){
+            history.push('/results')
+        }
+        else{
+            setIndex(questionIndex + 1)
+        }
+        
     }
     const submitAnswer = (event) => {
         event.preventDefault();
-        nextQuestion()
+        next()
     }
 
     const renderForm = () => {

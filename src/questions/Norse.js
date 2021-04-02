@@ -74,7 +74,7 @@ export const norseQuestions = [
         options:[
             {
                 id: 1,
-                text: "He persuaded Loki to dress as the bride and pretend to be Freya"
+                text: "He defeated Thyrm in a contest"
             },
             {
                 id: 2,
