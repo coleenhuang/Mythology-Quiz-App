@@ -1,7 +1,6 @@
 import React from 'react';
 
 const AnswerOptions  = ({answers, change}) => {
-    console.log(answers)
     return (
         <div onChange={change}>
                 {answers.map((answer, index) => (

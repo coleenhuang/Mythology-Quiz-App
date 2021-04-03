@@ -1,4 +1,4 @@
-import {FETCH_QUESTIONS, RESET_QUESTIONS, ADD_SCORE, RESET_ANSWERS, ADD_ANSWER} from './types'
+import {FETCH_QUESTIONS, RESET_QUESTIONS, RESET_ANSWERS, ADD_ANSWER} from './types'
 
 export function fetchQuestions(questionType){
     return {
@@ -28,3 +28,5 @@ export function resetAnswers () {
         type: RESET_ANSWERS
     }
 }
+
+

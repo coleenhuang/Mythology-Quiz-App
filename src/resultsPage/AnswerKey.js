@@ -1,5 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-const AnswerKey = () => {
-    return <div>List of questions and the correct answer</div>
+
+const AnswerKey = ({questionText, correct, correctAnswer, addScore, score}) => {
+    useEffect(() => {
+        if (correct) {
+            addScore(score + 1)
+        }
+    }, [])
+    return( 
+        <div>
+            <p>AnswerKey</p>
+            <p>{questionText}</p>
+            <p>{correct?'Correct':'Incorrect'}</p>
+            <p>Correct Answer: {correctAnswer}</p>
+
+        </div>)
 }
+
+export default AnswerKey;

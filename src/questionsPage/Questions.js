@@ -8,6 +8,7 @@ const Questions = ({questionList, addAnswer}) => {
     let history = useHistory();
     const [questionIndex, setIndex] = useState(0);
     const [selectedAnswer, setAnswer] = useState();
+    let q = questionList[questionIndex]
 
     const handleChange = (event) => {
         setAnswer(event.target.value)
@@ -23,15 +24,15 @@ const Questions = ({questionList, addAnswer}) => {
     }
     const submitAnswer = (event) => {
         event.preventDefault();
-        addAnswer(questionList[questionIndex].id, selectedAnswer)
+        addAnswer(q.id, parseInt(selectedAnswer))
         next()
     }
-
+    
     const renderForm = () => {
         if (questionList.length === 0) {
             return null
         }
-        let q = questionList[questionIndex]
+        
         return (
             <form onSubmit={submitAnswer}>
             <h2>{q.questionText}</h2>

@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 
-const Start = ({questionList, resetQuestions, fetchQuestions}) => {
+const Start = ({questionList, answerList, resetQuestions,resetAnswers, fetchQuestions}) => {
     useEffect(() => {
         if (questionList.length !== 0) {
             resetQuestions()
+        }
+        if (answerList.length !==0) {
+            resetAnswers()
         }
     }, [])
     
@@ -25,7 +28,8 @@ const Start = ({questionList, resetQuestions, fetchQuestions}) => {
 
 function mapStateToProps(state) {
     return {
-      questionList: state.questionList
+      questionList: state.questionList,
+      answerList: state.answerList
     }
 }
 
