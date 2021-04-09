@@ -43,7 +43,7 @@ const Questions = ({questionList, addAnswer}) => {
     }
     
     return (
-        <div>Questions
+        <div>
             {renderForm()}
         </div>
     )
